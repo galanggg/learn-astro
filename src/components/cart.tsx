@@ -74,12 +74,13 @@ export const Cart = () => {
 						{formatCurrency($subtotal())}
 					</p>
 					<p class={styles.checkout}>
-						<button
-							class="big-link"
-							onClick={() => setShowNotice(true)}
-						></button>
+						<button class="big-link" onClick={() => setShowNotice(true)}>
+							Check Out
+						</button>
 					</p>
-					<Show when={showNotice()}>//TODO: CheckoutNotice Component</Show>
+					<Show when={showNotice()}>
+						<CheckOut />
+					</Show>
 				</div>
 			</Show>
 		</aside>
